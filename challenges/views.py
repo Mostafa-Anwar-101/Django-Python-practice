@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
+from django.template.loader import render_to_string
 
 # Create your views here.
 
@@ -45,6 +46,7 @@ def monthly_challenges_by_number(request, month):
 def monthly_challenges(request, month):
     try:
         challenge_text = challenges[month]
-        return HttpResponse(challenge_text)
+        respose_data = render_to_string("challenges/challenge.html")
+        return HttpResponse(respose_data)
     except:
         return HttpResponseNotFound("This month is not supported")
