@@ -16,7 +16,7 @@ challenges = {
     "september": "Implement Infrastructure as Code (IaC)",
     "october": "Focus on Work-Life Balance",
     "november": "Disaster Recovery and Backup",
-    "december": "Reflect and Plan"
+    "december": None
 }
 
 

@@ -9,7 +9,11 @@
 
 <body>
     <h1>{{month_name | title}} challenge</h1>
-    <h2>{{ text }}</h2>
+    {% if text is not None %}
+        <h2>{{ text }}</h2>
+    {% else %}
+        <p> No Challeng For this month</p>
+    {% endif %}
 </body>
 
 </html>
